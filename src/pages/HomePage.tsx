@@ -111,9 +111,9 @@ function Hero({
         <div className="absolute inset-0 gradient-mesh opacity-40" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-15 md:py-18 lg:py-24">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full glass-dark px-4 py-2 text-sm font-600 text-white animate-fade-up">
+          <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-600 text-white animate-fade-up">
             <Sparkles size={16} className="text-accent-400" />
             {settings?.tagline || 'Premium Product Catalog'}
           </div>
@@ -155,8 +155,6 @@ function Hero({
           </div>
         </div>
       </div>
-
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-ink-50 to-transparent" />
     </section>
   );
 }

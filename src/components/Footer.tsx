@@ -10,20 +10,15 @@ export function Footer() {
   const tree = buildCategoryTree(categories).slice(0, 6);
 
   return (
-    <footer className="bg-ink-950 text-ink-300">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="bg-white text-ink-300">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-600 text-white font-bold text-lg">
-                L
-              </div>
-              <span className="font-display text-xl font-700 text-white">
-                {settings?.site_name || 'Lumiere'}
-              </span>
+              <img src="/logo.png" alt="Brand Logo" style={{ height: '40px', width: 'auto' }} />
             </Link>
-            <p className="text-sm leading-relaxed text-ink-400">
-              {settings?.tagline || 'Premium Product Catalog'}
+            <p className="text-sm leading-relaxed text-ink-700">
+              {settings?.tagline || '1000+ Premium Product Catalog'}
             </p>
             <div className="flex gap-2 pt-2">
               {settings?.facebook_url && (
@@ -42,7 +37,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-display text-sm font-700 uppercase tracking-wider text-white mb-4">
+            <h3 className="font-display text-sm font-700 uppercase tracking-wider text-black mb-4">
               Categories
             </h3>
             <ul className="space-y-2">
@@ -50,7 +45,7 @@ export function Footer() {
                 <li key={cat.id}>
                   <Link
                     to={`/category/${cat.slug}`}
-                    className="text-sm text-ink-400 hover:text-white transition-colors"
+                    className="text-sm text-ink-700 hover:text-black transition-colors"
                   >
                     {cat.name}
                   </Link>
@@ -60,25 +55,25 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-display text-sm font-700 uppercase tracking-wider text-white mb-4">
+            <h3 className="font-display text-sm font-700 uppercase tracking-wider text-black mb-4">
               Quick Links
             </h3>
             <ul className="space-y-2">
-              <li><Link to="/products" className="text-sm text-ink-400 hover:text-white transition-colors">All Products</Link></li>
-              <li><Link to="/about" className="text-sm text-ink-400 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/contact" className="text-sm text-ink-400 hover:text-white transition-colors">Contact</Link></li>
-              <li><Link to="/admin" className="text-sm text-ink-400 hover:text-white transition-colors">Admin Panel</Link></li>
+              <li><Link to="/products" className="text-sm text-ink-700 hover:text-black transition-colors">All Products</Link></li>
+              <li><Link to="/about" className="text-sm text-ink-700 hover:text-black transition-colors">About Us</Link></li>
+              <li><Link to="/contact" className="text-sm text-ink-700 hover:text-black transition-colors">Contact</Link></li>
+              <li><Link to="/admin" className="text-sm text-ink-700 hover:text-black transition-colors">Admin Panel</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-display text-sm font-700 uppercase tracking-wider text-white mb-4">
+            <h3 className="font-display text-sm font-700 uppercase tracking-wider text-black mb-4">
               Contact
             </h3>
             <ul className="space-y-3">
               {settings?.phone && (
                 <li>
-                  <a href={`tel:${settings.phone}`} className="flex items-center gap-3 text-sm text-ink-400 hover:text-white transition-colors">
+                  <a href={`tel:${settings.phone}`} className="flex items-center gap-3 text-sm text-ink-700 hover:text-black transition-colors">
                     <Phone size={16} className="text-brand-400" />
                     {settings.phone}
                   </a>
@@ -86,14 +81,14 @@ export function Footer() {
               )}
               {settings?.email && (
                 <li>
-                  <a href={`mailto:${settings.email}`} className="flex items-center gap-3 text-sm text-ink-400 hover:text-white transition-colors">
+                  <a href={`mailto:${settings.email}`} className="flex items-center gap-3 text-sm text-ink-700 hover:text-black transition-colors">
                     <Mail size={16} className="text-brand-400" />
                     {settings.email}
                   </a>
                 </li>
               )}
               {settings?.address && (
-                <li className="flex items-start gap-3 text-sm text-ink-400">
+                <li className="flex items-start gap-3 text-sm text-ink-700">
                   <MapPin size={16} className="text-brand-400 mt-0.5 shrink-0" />
                   {settings.address}
                 </li>
@@ -114,11 +109,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-ink-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-ink-500">
+        <div className="mt-12 pt-8 border-t border-gray-300 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-ink-700">
             © {new Date().getFullYear()} {settings?.site_name || 'Lumiere'}. All rights reserved.
           </p>
-          <p className="text-sm text-ink-500">Product Catalog — Not an online store</p>
+          <p className="text-sm text-ink-700">Developed by <a href="https://codeamar.com" className="text-brand-700" target="_blank" rel="noopener noreferrer">CodeAmar.Com</a></p>
         </div>
       </div>
     </footer>
