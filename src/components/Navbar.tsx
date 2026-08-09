@@ -84,7 +84,7 @@ export function Navbar() {
                 to="/admin"
                 className="hidden sm:flex items-center gap-1.5 rounded-xl bg-ink-900 px-4 py-2 text-sm font-600 text-white hover:bg-ink-800 transition-colors"
               >
-                Admin
+                Login
               </Link>
               <button
                 onClick={() => setMobileOpen((m) => !m)}
